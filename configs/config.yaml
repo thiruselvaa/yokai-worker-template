@@ -1,0 +1,54 @@
+app:
+  name: worker-app
+  version: 0.1.0
+modules:
+  core:
+    server:
+      address: ":8081"
+      dashboard:
+        enabled: true
+        overview:
+          app_env: true
+          app_debug: true
+          app_version: true
+          log_level: true
+          log_output: true
+          trace_sampler: true
+          trace_processor: true
+      metrics:
+        expose: true
+        collect:
+          enabled: true
+      healthcheck:
+        startup:
+          expose: true
+        readiness:
+          expose: true
+        liveness:
+          expose: true
+      debug:
+        config:
+          expose: true
+        pprof:
+          expose: true
+        routes:
+          expose: true
+        stats:
+          expose: true
+        build:
+          expose: true
+        modules:
+          expose: true
+  log:
+    level: info
+    output: stdout
+  trace:
+    processor:
+      type: noop
+  worker:
+    metrics:
+      collect:
+        enabled: true
+config:
+  example-worker:
+    interval: 3
