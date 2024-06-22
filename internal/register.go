@@ -1,7 +1,7 @@
 package internal
 
 import (
-	"github.com/ankorstore/yokai-worker-template/internal/worker"
+	"github.com/thiruselvaa/yokai-worker-template/internal/worker"
 	"github.com/ankorstore/yokai/fxworker"
 	"go.uber.org/fx"
 )
